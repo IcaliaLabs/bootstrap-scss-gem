@@ -1,4 +1,6 @@
-require "bootstrap/scss/version"
+# frozen_string_literal: true
+
+require 'bootstrap/scss/version'
 
 module Bootstrap
   module Scss
