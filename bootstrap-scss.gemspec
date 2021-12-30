@@ -28,8 +28,10 @@ Gem::Specification.new do |spec|
       'public gem pushes.'
   end
 
+  files = 'lib/* *.md *.gemspec *.txt Rakefile vendor/bootstrap/scss/*'
+
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.files         = `git ls-files -- lib/* *.md *.gemspec *.txt Rakefile`.split("\n")
+  spec.files         = `git ls-files --recurse-submodules -- #{files}`.split("\n")
   spec.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   spec.bindir        = 'exe'
   spec.require_paths = ['lib']
