@@ -2,6 +2,7 @@
 
 module Bootstrap
   module Scss
-    VERSION = '0.0.1' # We'll keep the version < 1.x until we finally figure this out
+    # We won't adopt bootstrap versions until we figure this gem out
+    VERSION = '0.0.3'
   end
 end

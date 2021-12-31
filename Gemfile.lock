@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    bootstrap-scss (0.0.1)
+    bootstrap-scss (0.0.3)
 
 GEM
   remote: https://rubygems.org/
@@ -52,7 +52,7 @@ GEM
     public_suffix (4.0.6)
     racc (1.6.0)
     rainbow (3.0.0)
-    rake (13.0.6)
+    rake (12.3.3)
     reek (6.0.6)
       kwalify (~> 0.7.0)
       parser (~> 3.0.0)
@@ -126,7 +126,7 @@ DEPENDENCIES
   bootstrap-scss!
   bundler (~> 2.2, >= 2.2.33)
   octokit (~> 4.21)
-  rake (>= 12.3.3)
+  rake (~> 12.3, >= 12.3.3)
   reek (~> 6.0, >= 6.0.2)
   rspec (~> 3.0)
   rubocop (~> 1.24)
