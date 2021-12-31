@@ -3,6 +3,6 @@
 module Bootstrap
   module Scss
     # We won't adopt bootstrap versions until we figure this gem out
-    VERSION = '0.0.2'
+    VERSION = '0.0.3'
   end
 end
