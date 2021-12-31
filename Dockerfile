@@ -6,7 +6,7 @@
 FROM ruby:3.1.0-alpine AS development-base
 
 # Install the app build system dependency packages:
-RUN apk add --no-cache build-base git
+RUN apk add --no-cache build-base cmake git libc6-compat libssh2-dev pkgconf zlib-dev
 
 # Receive the developer user's UID and USER:
 ARG DEVELOPER_UID=1000
