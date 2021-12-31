@@ -44,4 +44,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rugged', '~> 1.3'
   spec.add_development_dependency 'octokit', '~> 4.21'
+  spec.add_development_dependency 'addressable', '~> 2.8'
 end

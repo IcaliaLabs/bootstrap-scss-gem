@@ -122,6 +122,7 @@ PLATFORMS
   aarch64-linux-musl
 
 DEPENDENCIES
+  addressable (~> 2.8)
   bootstrap-scss!
   bundler (~> 2.1)
   octokit (~> 4.21)
