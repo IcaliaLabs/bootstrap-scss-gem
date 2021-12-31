@@ -56,3 +56,5 @@ module Bootstrap
     end
   end
 end
+
+Bootstrap::Scss.load!
