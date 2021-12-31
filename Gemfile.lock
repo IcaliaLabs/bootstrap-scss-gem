@@ -92,7 +92,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap-scss!
-  bundler (~> 2.1)
+  bundler (~> 2.2, >= 2.2.33)
   rake (~> 10.0)
   reek (~> 6.0, >= 6.0.2)
   rspec (~> 3.0)
