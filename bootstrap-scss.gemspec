@@ -39,10 +39,10 @@ Gem::Specification.new do |spec|
   # SassC requires Ruby 2.3.3. Also specify here to make it obvious.
   spec.required_ruby_version = '>= 2.3.3'
 
-  spec.add_development_dependency 'bundler', '~> 2.1'
-  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'addressable', '~> 2.8'
+  spec.add_development_dependency 'bundler', '~> 2.2', '>= 2.2.33'
+  spec.add_development_dependency 'octokit', '~> 4.21'
+  spec.add_development_dependency 'rake', '>= 12.3.3'
   spec.add_development_dependency 'rspec', '~> 3.0'
   spec.add_development_dependency 'rugged', '~> 1.3'
-  spec.add_development_dependency 'octokit', '~> 4.21'
-  spec.add_development_dependency 'addressable', '~> 2.8'
 end
