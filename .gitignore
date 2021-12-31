@@ -11,5 +11,3 @@
 .rspec_status
 
 **/*.gem
-
-vendor/assets/stylesheets/bootstrap

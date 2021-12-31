@@ -28,10 +28,10 @@ Gem::Specification.new do |spec|
           'public gem pushes.'
   end
 
-  files = 'lib/* *.md *.gemspec *.txt Rakefile vendor/bootstrap/scss/*'
+  files = 'lib/* *.md *.gemspec *.txt vendor/assets/bootstrap/scss/*'
 
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.files         = `git ls-files -- #{files}`.split("\n")
+  spec.files         = `git ls-files --recurse-submodules -- #{files}`.split("\n")
   spec.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   spec.bindir        = 'exe'
   spec.require_paths = ['lib']
@@ -40,8 +40,6 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>= 2.3.3'
 
   spec.add_development_dependency 'bundler', '~> 2.1'
-  spec.add_development_dependency 'faraday', '~> 1.8'
-  spec.add_development_dependency 'faraday_middleware', '~> 1.2'
   spec.add_development_dependency 'rake', '~> 10.0'
   spec.add_development_dependency 'rspec', '~> 3.0'
 end

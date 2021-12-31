@@ -4,6 +4,9 @@ require 'bootstrap/scss/version'
 
 module Bootstrap
   module Scss
+    GEM_PATH = File.expand_path '..', File.dirname(__FILE__)
+    ASSETS_PATH = File.join GEM_PATH, 'vendor', 'assets'
+
     class << self
       def load!
         if rails?
@@ -14,7 +17,7 @@ module Bootstrap
           register_sprockets
         elsif defined?(::Sass) && ::Sass.respond_to?(:load_paths)
           # The deprecated `sass` gem:
-          ::Sass.load_paths << stylesheets_path
+          ::Sass.load_paths << ASSETS_PATH
         end
 
         if defined?(::Sass::Script::Value::Number)
@@ -22,19 +25,6 @@ module Bootstrap
           # https://github.com/twbs/bootstrap/blob/da717b03e6e72d7a61c007acb9223b9626ae5ee5/package.json#L28
           ::Sass::Script::Value::Number.precision = [6, ::Sass::Script::Value::Number.precision].max
         end
-      end
-
-      # Paths
-      def gem_path
-        @gem_path ||= File.expand_path '..', File.dirname(__FILE__)
-      end
-
-      def stylesheets_path
-        File.join assets_path, 'stylesheets'
-      end
-
-      def assets_path
-        @assets_path ||= File.join gem_path, 'vendor', 'assets'
       end
 
       # Environment detection helpers
@@ -57,11 +47,11 @@ module Bootstrap
       end
 
       def register_sprockets
-        Sprockets.append_path stylesheets_path
+        Sprockets.append_path ASSETS_PATH
       end
 
       def register_hanami
-        Hanami::Assets.sources << assets_path
+        Hanami::Assets.sources << ASSETS_PATH
       end
     end
   end

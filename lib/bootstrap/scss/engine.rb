@@ -4,7 +4,7 @@ module Bootstrap
   module Scss
     class Engine < ::Rails::Engine
       initializer :assets do |app|
-        app.config.assets.paths << root.join('vendor', 'assets', 'stylesheets')
+        app.config.assets.paths << root.join('vendor', 'assets')
       end
     end
   end
