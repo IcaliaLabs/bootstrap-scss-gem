@@ -9,7 +9,6 @@ GEM
     ast (2.4.2)
     backport (1.2.0)
     benchmark (0.2.0)
-    coderay (1.1.3)
     diff-lcs (1.5.0)
     e2mmap (0.1.0)
     jaro_winkler (1.5.4)
@@ -18,7 +17,6 @@ GEM
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     kwalify (0.7.2)
-    method_source (1.0.0)
     mini_portile2 (2.6.1)
     nokogiri (1.12.5)
       mini_portile2 (~> 2.6.1)
@@ -26,9 +24,6 @@ GEM
     parallel (1.21.0)
     parser (3.0.3.2)
       ast (~> 2.4.1)
-    pry (0.14.1)
-      coderay (~> 1.1)
-      method_source (~> 1.0)
     racc (1.6.0)
     rainbow (3.0.0)
     rake (10.5.0)
@@ -98,7 +93,6 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-scss!
   bundler (~> 2.1)
-  pry (~> 0.14.1)
   rake (~> 10.0)
   reek (~> 6.0, >= 6.0.2)
   rspec (~> 3.0)
