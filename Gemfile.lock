@@ -30,6 +30,8 @@ GEM
     faraday-net_http_persistent (1.2.0)
     faraday-patron (1.0.0)
     faraday-rack (1.0.0)
+    faraday_middleware (1.2.0)
+      faraday (~> 1.0)
     jaro_winkler (1.5.4)
     kramdown (2.3.1)
       rexml
@@ -115,6 +117,7 @@ DEPENDENCIES
   bootstrap-scss!
   bundler (~> 2.1)
   faraday (~> 1.8)
+  faraday_middleware (~> 1.2)
   rake (~> 10.0)
   reek (~> 6.0, >= 6.0.2)
   rspec (~> 3.0)
