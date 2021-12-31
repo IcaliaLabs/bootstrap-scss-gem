@@ -31,10 +31,13 @@ Gem::Specification.new do |spec|
   files = 'lib/* *.md *.gemspec *.txt Rakefile vendor/bootstrap/scss/*'
 
   spec.executables   = spec.files.grep(%r{^exe/}) { |f| File.basename(f) }
-  spec.files         = `git ls-files --recurse-submodules -- #{files}`.split("\n")
+  spec.files         = `git ls-files -- #{files}`.split("\n")
   spec.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   spec.bindir        = 'exe'
   spec.require_paths = ['lib']
+
+  # SassC requires Ruby 2.3.3. Also specify here to make it obvious.
+  spec.required_ruby_version = '>= 2.3.3'
 
   spec.add_development_dependency 'bundler', '~> 2.1'
   spec.add_development_dependency 'faraday', '~> 1.8'
