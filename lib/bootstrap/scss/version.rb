@@ -2,6 +2,6 @@
 
 module Bootstrap
   module Scss
-    VERSION = '0.0.1'
+    VERSION = '5.1.3'
   end
 end
