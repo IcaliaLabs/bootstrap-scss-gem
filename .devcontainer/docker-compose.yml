@@ -1,0 +1,28 @@
+volumes:
+  vscode_extensions:
+  vscode_insiders_extensions:
+
+services:
+  development:
+    volumes:
+      - .:/workspaces/bootstrap-scss
+      - gem_bundle:/usr/local/bundle
+      - vscode_extensions:/home/${USER:-you}/.vscode-server/extensions
+      - vscode_insiders_extensions:/home/${USER:-you}/.vscode-server-insiders/extensions
+
+    # The command we want to execute by default when running the container
+    # [Optional] Required for ptrace-based debuggers like C++, Go, and Rust
+    cap_add:
+      - SYS_PTRACE
+      - NET_ADMIN
+    security_opt:
+      - seccomp:unconfined
+
+    # Overrides default command so things don't shut down after the process ends.
+    command: /bin/sh -c "while sleep 1000; do :; done"
+
+    environment:
+      VSCODE_CONTEXT: "yes"
+
+      # Use VSCode as editor:
+      EDITOR: code -w

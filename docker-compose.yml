@@ -1,0 +1,16 @@
+volumes:
+  gem_bundle:
+
+services:
+  development:
+    image: icalialabs/bootstrap-scss-gem:development
+    build: &build
+      context: .
+      target: development
+      args:
+        DEVELOPER_UID: ${UID:-1000} # Keep in mind, most CI/CD environments will have this variable unset!
+        DEVELOPER_USERNAME: ${USER:-you}
+    command: bundle console
+    volumes:
+      - .:/workspaces/bootstrap-scss
+      - gem_bundle:/usr/local/bundle
